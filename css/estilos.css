@@ -1,0 +1,190 @@
+/* Personaliza el header */
+header {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* estilos.css */
+.bg-morado {
+    background-color: #351a7e; /* Color azul oscuro personalizado */
+    color: white;
+}
+
+.bg-celeste-claro {
+    background-color: #e8f6fa; /* Color azul oscuro personalizado */
+}
+
+.bg-amarillo {
+    background-color: #f5e324;
+}
+
+.bg-amarillo:hover {
+    background-color: #a2971a;
+    color: #e8f6fa;
+}
+
+.bg-anaranjado {
+    background-color: #ff720e;
+    color: #e8f6fa;
+}
+
+.bg-anaranjado:hover {
+    background-color: #c55a0d;
+    color: #e8f6fa;
+}
+
+.bg-btn-vino {
+    background-color: #7a1b27;
+}
+
+.bg-btn-vino:hover {
+    background-color: #FACC15;
+    color: #7a1b27;
+}
+
+.bg-azul-oscuro {
+    background-color: #160864;
+    color: #e8f6fa;
+}
+
+.bg-azul-oscuro:hover {
+    background-color: #0a0429;
+    color: #e8f6fa;
+}
+
+.bg-celeste-verdoso {
+    background-color: #5594a2;
+    color: #e8f6fa;
+}
+
+.bg-celeste-verdoso:hover {
+    background-color: #2f5057;
+    color: #e8f6fa;
+}
+
+.bg-verde-opaco {
+    background-color: #effff3;
+}
+
+.bg-morado-oscuro {
+    background-color: #2a0645;
+    color: #e8f6fa;
+}
+
+.bg-morado-oscuro:hover {
+    background-color: #160424;
+    color: #e8f6fa;
+}
+
+.bg-beich {
+    background-color: #2e5262;
+}
+
+.bg-card-container-amarillo {
+    background-color: #E1B53E;
+}
+
+.bg-card-azul {
+    background-color: #0c1e47;
+}
+
+.bg-card-morado {
+    background-color: #360530;
+}
+
+.bg-card-morado-tenue {
+    background-color: #2e1b4a;
+}
+
+.texto-morado {
+    color: #351a7e;
+}
+
+.texto-morado-tenue {
+    color: #4755b4;
+}
+
+.texto-amarillo {
+    color: #DAB755;
+}
+
+.texto-anaranjado {
+    color: #ff7d22;
+}
+
+.border-morado-tenue {
+    border-color: #4755b4;
+}
+
+.bg-gradient-to-b {
+    z-index: 1; /* Asegura que la sección no sea cubierta */
+}
+
+#modal {
+    z-index: 1000; /* Asegura que el modal se quede por encima */
+}
+
+/*Estilos Testimonios*/
+
+#testimonios {
+    display: flex;
+    gap: 1.5rem; /* Espaciado entre los testimonios */
+    overflow: hidden;
+}
+
+/* Solo mostrar 3 testimonios */
+.testimonio {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.testimonio.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.testimonio.hidden {
+    display: none;
+}
+
+#prev, #next {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Efecto hover para los botones */
+#prev:hover, #next:hover {
+    background-color: #2d3748; /* Fondo gris más oscuro */
+}
+
+/* Estilo para alinear los botones */
+#prev, #next {
+    margin: 0 10px;
+}
+
+/* Estilo para el contenedor de los botones */
+#prev, #next {
+    margin-top: 20px;
+    display: inline-block;
+}
+/* Evitar el desbordamiento en pantallas pequeñas */
+@media (max-width: 768px) {
+    #testimonios {
+        flex-direction: column;
+    }
+
+    #testimonios-wrapper {
+        width: auto;
+    }
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}  
