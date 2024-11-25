@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - Tecnologías Cloud</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div>
+        <header class="bg-morado fixed inset-x-0 top-0 z-50 mb-10">
+            <!-- Navbar -->
+            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                <div class="flex lg:flex-1 items-center">
+                    <a href="#" class="-m-1.5 p-1.5 flex items-center">
+                        <span class="sr-only">Mi sitio Web</span>
+                        <!-- Logo -->
+                        <img class="h-8 w-8" src="images/cloud-logo.png" alt="Logo">
+                        <!-- Título al lado del logo -->
+                        <span class="ml-3 text-xl font-bold text-white">Cloudy</span>
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <!-- Menú -->
+                    <a href="index.html" class="text-white text-sm font-semibold text-gray-900">Inicio</a>
+                    <a href="nosotros.html" class="text-white text-sm font-semibold text-gray-900">Nosotros</a>
+                    <a href="aplicaciones.html" class="text-white text-sm font-semibold text-gray-900">Explorar</a>
+                    <a href="servicios.html" class="text-white text-sm font-semibold text-gray-900">Servicios</a>
+                    <a href="contactos.html" class="text-white text-sm font-semibold text-gray-900">Contactos</a>
+                </div>
+                <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
+                    <!-- Botón Cambiar Estilos -->
+                    <button id="cambiar-estilos" class="bg-amarillo texto-morado font-semibold px-6 py-2 rounded btn-personalizar transition duration-300 ease-in-out">
+                        Personalizar
+                    </button>
+                    
+                    <!-- Menú desplegable -->
+                    <div id="sidebar" class="translate-x-full fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex justify-end">
+                        <div class="w-64 bg-white p-4">
+                            <button id="close-sidebar" class="bg-red-500 p-2 text-white rounded-full h-10 w-10 flex items-center justify-center">X</button>
+                            <h3 class="text-xl text-center font-semibold texto-morado">Cambiar Estilos</h3>
+    
+                            <div class="mt-4">
+                                <label for="font-size" class="block text-black font-semibold">Tamaño de fuente</label>
+                                <input type="number" id="font-size" min="12" max="24" class="border p-2 w-full mt-2 text-black" placeholder="Tamaño de fuente (12-24)">
+                                <button id="apply-font-size" class="mt-2 bg-anaranjado text-white px-6 py-2 rounded transition duration-300 ease-in-out mx-auto block">
+                                    Cambiar fuente
+                                </button>
+                            </div>
+    
+                            <div class="mt-4">
+                                <button id="bold-button" class="w-full bg-azul-oscuro p-2 rounded mb-2">Negrita</button>
+                                <button id="italic-button" class="w-full bg-celeste-verdoso p-2 rounded mb-2">Cursiva</button>
+                                <button id="dark-mode" class="w-full bg-morado-oscuro p-2 rounded">Modo Oscuro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="bg-black py-10 z-10 pt-28">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-white text-4xl font-bold mb-8">Comienza con tus herramientas favoritas en la nube.</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Tarjeta 1: AWS -->
+            <a href="https://aws.amazon.com" class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition-all">
+              <div class="flex items-center mb-4">
+                <span class="text-3xl text-white">☁️</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Amazon Web Services (AWS)</h3>
+              <p class="text-gray-300">Una plataforma en la nube integral y ampliamente adoptada que ofrece una variedad de servicios.</p>
+              <div class="mt-4 text-white text-lg">2.5M</div>
+            </a>
+      
+            <!-- Tarjeta 2: Google Cloud -->
+            <a href="https://cloud.google.com" class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition-all">
+              <div class="flex items-center mb-4">
+                <span class="text-3xl text-white">🔧</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Google Cloud</h3>
+              <p class="text-gray-300">Proporciona infraestructura, plataformas y software como servicio, utilizando la infraestructura pública de Google.</p>
+              <div class="mt-4 text-white text-lg">271.5K</div>
+            </a>
+      
+            <!-- Tarjeta 3: Microsoft Azure -->
+            <a href="https://azure.microsoft.com" class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition-all">
+              <div class="flex items-center mb-4">
+                <span class="text-3xl text-white">🖥️</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Microsoft Azure</h3>
+              <p class="text-gray-300">Un servicio de computación en la nube de Microsoft que ofrece una variedad de servicios en la nube para diferentes soluciones.</p>
+              <div class="mt-4 text-white text-lg">66.3K</div>
+            </a>
+      
+            <!-- Tarjeta 4: IBM Cloud -->
+            <a href="https://www.ibm.com/cloud" class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition-all">
+              <div class="flex items-center mb-4">
+                <span class="text-3xl text-white">💡</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">IBM Cloud</h3>
+              <p class="text-gray-300">Plataforma en la nube de IBM que ofrece infraestructura como servicio, software como servicio y más.</p>
+              <div class="mt-4 text-white text-lg">105.2K</div>
+            </a>
+      
+            <!-- Tarjeta 5: Oracle Cloud -->
+            <a href="https://www.oracle.com/cloud/" class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition-all">
+              <div class="flex items-center mb-4">
+                <span class="text-3xl text-white">🔒</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Oracle Cloud</h3>
+              <p class="text-gray-300">Ofrece soluciones de nube empresarial, con especial enfoque en bases de datos y aplicaciones empresariales.</p>
+              <div class="mt-4 text-white text-lg">89.2K</div>
+            </a>
+      
+            <!-- Tarjeta 6: DigitalOcean -->
+            <a href="https://www.digitalocean.com" class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition-all">
+              <div class="flex items-center mb-4">
+                <span class="text-3xl text-white">🌐</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">DigitalOcean</h3>
+              <p class="text-gray-300">Plataforma en la nube sencilla para desarrolladores que facilita la implementación de aplicaciones web y servicios.</p>
+              <div class="mt-4 text-white text-lg">48.6K</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-gray-700 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-white text-4xl font-bold mb-8">Video relacionado con las aplicaciones de Cloud</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Columna de imagen con el engranaje girando -->
+            <div class="flex justify-center items-center">
+              <div class="relative w-64 h-64">
+                <img src="https://cdn-icons-png.flaticon.com/512/40/40031.png" alt="Engranaje girando" class="w-full h-full animate-spin-slow"/>
+              </div>
+            </div>
+      
+            <!-- Columna del video de YouTube -->
+            <div class="flex justify-center items-center">
+              <iframe class="w-full h-80" src="https://www.youtube.com/embed/ks0CfD_0E-k?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Estilos adicionales para la animación -->
+      <style>
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      
+        .animate-spin-slow {
+          animation: spin 10s linear infinite;
+        }
+      </style>
+      
+      
+
+
+  <!-- Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
