@@ -279,5 +279,14 @@ document.addEventListener('DOMContentLoaded', function () {
     startAutoSlide();
 });
 
+    // Selección de elementos
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Alternar la visibilidad del menú al hacer clic
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
 
 
