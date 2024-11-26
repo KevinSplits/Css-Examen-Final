@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - Tecnologías Cloud</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div>
+        <header class="bg-morado fixed inset-x-0 top-0 z-50 mb-10">
+            <!-- Navbar -->
+            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                <div class="flex lg:flex-1 items-center">
+                    <a href="#" class="-m-1.5 p-1.5 flex items-center">
+                        <span class="sr-only">Mi sitio Web</span>
+                        <!-- Logo -->
+                        <img class="h-8 w-8" src="images/cloud-logo.png" alt="Logo">
+                        <!-- Título al lado del logo -->
+                        <span class="ml-3 text-xl font-bold text-white">Cloudy</span>
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <!-- Menú -->
+                    <a href="index.html" class="text-white text-sm font-semibold text-gray-900">Inicio</a>
+                    <a href="nosotros.html" class="text-white text-sm font-semibold text-gray-900">Nosotros</a>
+                    <a href="aplicaciones.html" class="text-white text-sm font-semibold text-gray-900">Tipos de cloud</a>
+                    <a href="servicios.html" class="text-white text-sm font-semibold text-gray-900">Aplicaciones</a>
+                    <a href="contactos.html" class="text-white text-sm font-semibold text-gray-900">Contactos</a>
+                </div>
+                <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
+                    <!-- Botón Cambiar Estilos -->
+                    <button id="cambiar-estilos" class="bg-amarillo texto-morado font-semibold px-6 py-2 rounded btn-personalizar transition duration-300 ease-in-out">
+                        Personalizar
+                    </button>
+                    
+                    <!-- Menú desplegable -->
+                    <div id="sidebar" class="translate-x-full fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex justify-end">
+                        <div class="w-64 bg-white p-4">
+                            <button id="close-sidebar" class="bg-red-500 p-2 text-white rounded-full h-10 w-10 flex items-center justify-center">X</button>
+                            <h3 class="text-xl text-center font-semibold texto-morado">Cambiar Estilos</h3>
+    
+                            <div class="mt-4">
+                                <label for="font-size" class="block text-black font-semibold">Tamaño de fuente</label>
+                                <input type="number" id="font-size" min="12" max="24" class="border p-2 w-full mt-2 text-black" placeholder="Tamaño de fuente (12-24)">
+                                <button id="apply-font-size" class="mt-2 bg-anaranjado text-white px-6 py-2 rounded transition duration-300 ease-in-out mx-auto block">
+                                    Cambiar fuente
+                                </button>
+                            </div>
+    
+                            <div class="mt-4">
+                                <button id="bold-button" class="w-full bg-azul-oscuro p-2 rounded mb-2">Negrita</button>
+                                <button id="italic-button" class="w-full bg-celeste-verdoso p-2 rounded mb-2">Cursiva</button>
+                                <button id="dark-mode" class="w-full bg-morado-oscuro p-2 rounded">Modo Oscuro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="bg-gray-700 text-white z-10 pt-20">
+        <!-- Container -->
+        <div class="container mx-auto px-6 py-12">
+          <!-- Header -->
+          <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">Tipos de Cloud Computing</h1>
+            <p class="text-gray-400 text-lg">
+              Descubre los diferentes modelos de nube para encontrar el más adecuado para tus necesidades.
+            </p>
+          </div>
+      
+          <!-- Features Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Nube Pública -->
+            <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-lg shadow-lg transition transform hover:scale-105">
+              <div class="w-16 h-16 flex items-center justify-center bg-blue-600 rounded-full mb-4">
+                <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 018 0 4 4 0 11-8 0zm18 0a4 4 0 00-8 0 4 4 0 108 0z" />
+                </svg>
+              </div>
+              <h2 class="text-xl font-semibold mb-2">Nube Pública</h2>
+              <p class="text-gray-400 text-sm">
+                Servicios ofrecidos a través de internet por terceros, ideales para empresas que buscan escalabilidad y costos reducidos.
+              </p>
+            </div>
+      
+            <!-- Nube Privada -->
+            <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-lg shadow-lg transition transform hover:scale-105">
+              <div class="w-16 h-16 flex items-center justify-center bg-green-600 rounded-full mb-4">
+                <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m10 12V4m-5 16h2m-2 0H9m6 0h2" />
+                </svg>
+              </div>
+              <h2 class="text-xl font-semibold mb-2">Nube Privada</h2>
+              <p class="text-gray-400 text-sm">
+                Infraestructura dedicada exclusivamente a una organización, ofreciendo mayor control y seguridad.
+              </p>
+            </div>
+      
+            <!-- Nube Híbrida -->
+            <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-lg shadow-lg transition transform hover:scale-105">
+              <div class="w-16 h-16 flex items-center justify-center bg-yellow-600 rounded-full mb-4">
+                <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16v4m8-4v4m0 0h4m-12 0H4m12 0a4 4 0 00-8 0" />
+                </svg>
+              </div>
+              <h2 class="text-xl font-semibold mb-2">Nube Híbrida</h2>
+              <p class="text-gray-400 text-sm">
+                Combina nubes públicas y privadas, permitiendo una mayor flexibilidad y optimización de recursos.
+              </p>
+            </div>
+      
+            <!-- Nube Comunitaria -->
+            <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-lg shadow-lg transition transform hover:scale-105">
+              <div class="w-16 h-16 flex items-center justify-center bg-purple-600 rounded-full mb-4">
+                <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M9 21V3m4 18l7-7-7-7" />
+                </svg>
+              </div>
+              <h2 class="text-xl font-semibold mb-2">Nube Comunitaria</h2>
+              <p class="text-gray-400 text-sm">
+                Compartida entre varias organizaciones con necesidades comunes, ideal para sectores regulados.
+              </p>
+            </div>
+          </div>
+      
+          <!-- Detailed Information Section -->
+          <div class="mt-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Más Detalles sobre los Tipos de Cloud Computing</h2>
+            <div class="space-y-8">
+                <!-- Nube Pública -->
+                <div class="bg-gray-900 p-6 rounded-lg">
+                  <h3 class="text-2xl font-semibold text-blue-500 mb-3">Nube Pública</h3>
+                  <p class="text-gray-400">
+                    Las nubes públicas son operadas por proveedores externos como AWS, Microsoft Azure o Google Cloud. Ofrecen un costo inicial bajo y son ideales para startups y empresas que no desean invertir en infraestructura propia. 
+                    <img class="w-3/6 mt-6 mb-6 mx-auto transform transition-all hover:scale-110 hover:shadow-lg hover:shadow-white duration-500" src="https://cinusual.com/wp-content/uploads/2024/04/conoce-las-diferencias-entre-la-nube-publica-y-la-nube-privada.jpg">
+                    Algunos de los beneficios clave incluyen:
+                    <ul class="list-disc list-inside mt-2 text-gray-400">
+                      <li>Escalabilidad: permite agregar recursos fácilmente según la demanda.</li>
+                      <li>Costos reducidos: no es necesario mantener servidores físicos.</li>
+                      <li>Accesibilidad global: acceso a los servicios desde cualquier parte del mundo.</li>
+                    </ul>
+                    <p class="text-gray-400">Sin embargo, pueden surgir preocupaciones respecto a la privacidad y el cumplimiento de regulaciones específicas para ciertos sectores.</p>
+                    
+                  </p>
+                  
+                </div>
+              
+                <!-- Nube Privada -->
+                <div class="bg-gray-900 p-6 rounded-lg">
+                  <h3 class="text-2xl font-semibold text-green-500 mb-3">Nube Privada</h3>
+                  <p class="text-gray-400">
+                    La nube privada proporciona una infraestructura dedicada exclusivamente a una organización. Esto permite personalizar recursos y mantener un control total sobre los datos, siendo ideal para industrias con requisitos estrictos de seguridad, como las finanzas o la salud.
+                    <img class="w-3/6 mt-6 mb-6 mx-auto transform transition-all hover:scale-110 hover:shadow-lg hover:shadow-white duration-500" src="https://heptahost.com/wp-content/uploads/2024/03/nube-privada-heptahost.png">
+                    Sus ventajas principales son:
+                    <ul class="list-disc list-inside mt-2 text-gray-400">
+                      <li>Seguridad mejorada: control total sobre la infraestructura y los datos.</li>
+                      <li>Personalización: se adapta específicamente a las necesidades de la empresa.</li>
+                      <li>Cumplimiento de normativas: facilita el cumplimiento de estándares como GDPR o HIPAA.</li>
+                    </ul>
+                    <p class="text-gray-400">Aunque brinda muchas ventajas, suele ser más costosa y requiere un equipo interno para su mantenimiento.</p>
+                  </p>
+                  
+                </div>
+              
+                <!-- Nube Híbrida -->
+                <div class="bg-gray-900 p-6 rounded-lg">
+                  <h3 class="text-2xl font-semibold text-yellow-500 mb-3">Nube Híbrida</h3>
+                  <p class="text-gray-400">
+                    La nube híbrida permite a las organizaciones combinar la escalabilidad de las nubes públicas con la seguridad de las privadas, optimizando el uso de recursos según la necesidad del momento. Este enfoque flexible es ideal para empresas que buscan equilibrar costos, rendimiento y seguridad.
+                    <img class="w-3/6 mt-6 mb-6 mx-auto transform transition-all hover:scale-110 hover:shadow-lg hover:shadow-white duration-500" src="https://www.masip.es/wp-content/uploads/2023/06/el-valor-de-la-nube-hibrida-y-la-inteligencia-artificial-scaled.jpeg">
+                    Beneficios de la nube híbrida:
+                    <ul class="list-disc list-inside mt-2 text-gray-400">
+                      <li>Flexibilidad: mover cargas de trabajo entre nubes públicas y privadas según se requiera.</li>
+                      <li>Costo-eficiencia: usa recursos públicos para operaciones no críticas y privados para datos sensibles.</li>
+                      <li>Resiliencia: mejora la continuidad del negocio mediante redundancia.</li>
+                    </ul>
+                    <p class="text-gray-400">Es una opción ideal para organizaciones que experimentan fluctuaciones estacionales en sus operaciones.</p>
+                  </p>
+                 
+                </div>
+              
+                <!-- Nube Comunitaria -->
+                <div class="bg-gray-900 p-6 rounded-lg">
+                  <h3 class="text-2xl font-semibold text-purple-500 mb-3">Nube Comunitaria</h3>
+                  <p class="text-gray-400">
+                    Las nubes comunitarias están diseñadas para ser compartidas entre organizaciones con objetivos comunes, como en sectores de salud, educación o gobierno. Ayudan a reducir costos manteniendo un alto grado de colaboración entre los participantes.
+                </p>
+                <img class="w-3/6 mt-6 mb-6 mx-auto transform transition-all hover:scale-110 hover:shadow-lg hover:shadow-white duration-500" src="https://www.esystems.com.co/wp-content/uploads/2021/06/tipos-de-servidores-en-la-nube.jpg">
+                
+                    <p class="text-gray-400">Características principales:</p>
+                    
+                    <ul class="list-disc list-inside mt-2 text-gray-400">
+                      <li>Colaboración: permite a múltiples entidades trabajar en un entorno compartido.</li>
+                      <li>Costo compartido: los gastos de infraestructura y mantenimiento se dividen entre los participantes.</li>
+                      <li>Adaptación sectorial: diseñada para cumplir con regulaciones y estándares específicos de la industria.</li>
+                    </ul>
+                    <p class="text-gray-400">Aunque fomenta la cooperación, puede presentar desafíos en términos de gestión y gobernanza compartida.</p>
+                    
+                  
+
+
+
+
+
+
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <!-- Título de la Galería -->
+                    <h2 class="text-white text-3xl font-semibold mb-6 text-center">Galería de Imágenes Acerca del Tema</h2>
+                
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Primera columna de imágenes -->
+                        <div class="grid gap-4">
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://janasheikhbahaei.ir/wp-content/uploads/2024/11/Cloud-Computing-Definition2.jpg" alt="Imagen 1">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://render.fineartamerica.com/images/rendered/default/greeting-card/images-medium-5/1-cloud-computing-ktsdesign.jpg?&targetx=0&targety=-12&imagewidth=700&imageheight=525&modelwidth=700&modelheight=500&backgroundcolor=539BA4&orientation=0" alt="Imagen 2">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://esemanal.mx/revista/wp-content/uploads/2014/05/nibm.jpg" alt="Imagen 3">
+                            </div>
+                        </div>
+                    
+                        <!-- Segunda columna de imágenes -->
+                        <div class="grid gap-4">
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://cdn.prod.website-files.com/60ff451f4874316baf91d00d/662aed156993ddf50b8212b8_cloud%20challenge%20(700%20x%20500%20px)%20(2)%20(1).png" alt="Imagen 4">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://canadiansme.ca/wp-content/uploads/2024/02/13.png" alt="Imagen 5">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://images.squarespace-cdn.com/content/v1/5ae91fc4a9e0289ba81552b8/1582682838353-N0Z9QWGFUFHWNYK0BG8V/fundamentals_cloud_architecture.jpg?format=2500w" alt="Imagen 6">
+                            </div>
+                        </div>
+                    
+                        <!-- Tercera columna de imágenes -->
+                        <div class="grid gap-4">
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://web.sigmma.net/elsiglo/sitio/uploads/notas/Almacenamiento-en-la-Nube.jpg" alt="Imagen 7">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://graduatesdaily.com/wp-content/uploads/2024/01/Cloud-Architect-Certification-Course-Details-Syllabus-Scope-1.jpg" alt="Imagen 8">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://dinarys.com/storage/images/blogs/mbcCgWWx5rRdZPvejwyE8YtP1Gp8ISiK8zRAj1E4.jpeg" alt="Imagen 9">
+                            </div>
+                        </div>
+                    
+                        <!-- Cuarta columna de imágenes -->
+                        <div class="grid gap-4">
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://cdn.prod.website-files.com/64d05b8bc1a8218bcbc73fb9/6503ae784622b7253b0a1e65_rsz_data-the-cloud-storage-information-concept-ps4qupm-700x500.jpeg" alt="Imagen 10">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://australiancybersecuritymagazine.com.au/wp-content/uploads/2024/11/Veeams.jpg" alt="Imagen 11">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full rounded-lg" src="https://australiancybersecuritymagazine.com.au/wp-content/uploads/2024/07/LexisNexis.jpg" alt="Imagen 12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+              </div>
+              
+          </div>
+        </div>
+    </div>
+    
+  
+
+    <footer class="bg-morado text-white py-16 text-xl">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            <!-- Columna de logo y texto descriptivo -->
+            <div class="flex flex-col items-start space-y-4">
+              <div class="text-2xl font-semibold">
+                <span class="text-blue-500">Cloudy</span>
+              </div>
+              <p class="italic">El poder de la nube, a tu alcance.</p>
+              <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="fab fa-facebook-f"></i> <!-- Facebook icon -->
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="fab fa-x-twitter"></i> <!-- Twitter icon -->
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="fab fa-github"></i> <!-- GitHub icon -->
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="fab fa-youtube"></i> <!-- YouTube icon -->
+                </a>
+              </div>
+            </div>
+      
+            <!-- Soluciones -->
+            <div>
+              <h3 class="font-semibold text-lg">Colaboradores</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white">Kevin Kobashikawa Cavero</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Pablo Boza Torres</a></li>
+    
+              </ul>
+            </div>
+      
+      
+            <!-- Empresa -->
+            <div>
+              <h3 class="font-semibold text-lg">Teléfono</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white">+51 988 388 321</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">+51 938 378 721</a></li>
+    
+              </ul>
+            </div>
+      
+            <!-- Legal -->
+            <div>
+              <h3 class="font-semibold text-lg">Correo</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white">kevin100556@gmail.com</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">panlox123@gmail.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-16 text-center text-gray-400">
+            <p>© 2024 Cloud, Inc. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+      
+
+
+  <!-- Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
