@@ -119,6 +119,44 @@ header {
     z-index: 1; /* Asegura que la sección no sea cubierta */
 }
 
+/*Estilos Contactos*/
+
+.borde-morado {
+    border: 2px solid #351a7e; /* Borde morado visible */
+    padding: 8px; /* Asegura que el contenido no quede pegado al borde */
+    outline: none; /* Elimina el borde adicional al hacer clic */
+    border-radius: 0.375rem; /* Mantiene los bordes redondeados */
+}
+
+.borde-morado:focus {
+    border-color: #4b2aae; /* Cambia el color del borde cuando el input está enfocado */
+    box-shadow: 0 0 4px #4b2aae; /* Agrega un leve resplandor morado */
+}
+
+.btn-ratio-morado {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #351a7e; /* Color del borde */
+    border-radius: 50%; /* Hace que el radio button sea redondeado */
+    width: 18px; /* Tamaño del radio button */
+    height: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.btn-ratio-morado:checked {
+    background-color: #351a7e; /* Color del radio button cuando está seleccionado */
+    border-color: #351a7e; /* Color del borde cuando está seleccionado */
+}
+
+.btn-ratio-morado:focus {
+    outline: none; /* Elimina el contorno de enfoque predeterminado */
+    box-shadow: 0 0 4px #4b2aae; /* Resplandor cuando está enfocado */
+}
+
+
 #modal {
     z-index: 1000; /* Asegura que el modal se quede por encima */
 }
@@ -151,6 +189,23 @@ header {
     font-size: 1rem;
     font-weight: 500;
 }
+
+/*Efecto Parallax*/
+
+.parallax {
+    background-attachment: fixed;  /* Esto mantiene el fondo fijo mientras se hace scroll */
+    background-position: center;   /* Ajusta el fondo para que se centre */
+    background-size: cover;        /* Asegura que el fondo cubra toda el área */
+    height: 100vh;                 /* Asegura que la sección tenga al menos la altura de la ventana */
+    position: relative;            /* Necesario para el contenido absoluto */
+  }
+  
+/* Asegúrate de que el texto sea legible sobre el fondo */
+.parallax h2 {
+    font-size: 2rem;  /* Ajusta el tamaño según sea necesario */
+    font-weight: bold;
+}
+
 
 /* Efecto hover para los botones */
 #prev:hover, #next:hover {

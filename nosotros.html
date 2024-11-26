@@ -1,46 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - Tecnologías Cloud</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="p-8 bg-gray-100">
-        <h3 class="text-2xl font-bold mb-4">Tipos Principales</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h4 class="text-xl font-bold">Infraestructura como Servicio (IaaS)</h4>
-            <p>Proporciona acceso a hardware y redes virtuales.</p>
-          </div>
-          <div>
-            <h4 class="text-xl font-bold">Plataforma como Servicio (PaaS)</h4>
-            <p>Ofrece un entorno para desarrollar, probar y desplegar aplicaciones.</p>
-          </div>
+<body class="bg-gray-100 text-gray-900">
+  <div>
+    <header class="bg-morado fixed inset-x-0 top-0 z-50 mb-10">
+      <!-- Navbar -->
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1 items-center">
+            <a href="#" class="-m-1.5 p-1.5 flex items-center">
+                <span class="sr-only">Mi sitio Web</span>
+                <!-- Logo -->
+                <img class="h-8 w-8" src="images/cloud-logo.png" alt="Logo">
+                <!-- Título al lado del logo -->
+                <span class="ml-3 text-xl font-bold text-white">Cloudy</span>
+            </a>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Open main menu</span>
+                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+            <!-- Menú -->
+            <a href="index.html" class="text-white text-sm font-semibold text-gray-900">Inicio</a>
+            <a href="nosotros.html" class="text-white text-sm font-semibold text-gray-900">Nosotros</a>
+            <a href="aplicaciones.html" class="text-white text-sm font-semibold text-gray-900">Explorar</a>
+            <a href="servicios.html" class="text-white text-sm font-semibold text-gray-900">Servicios</a>
+            <a href="contactos.html" class="text-white text-sm font-semibold text-gray-900">Contactos</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
+            <!-- Botón Cambiar Estilos -->
+            <button id="cambiar-estilos" class="bg-amarillo texto-morado font-semibold px-6 py-2 rounded btn-personalizar transition duration-300 ease-in-out">
+                Personalizar
+            </button>
+            
+            <!-- Menú desplegable -->
+            <div id="sidebar" class="translate-x-full fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex justify-end">
+                <div class="w-64 bg-white p-4">
+                    <button id="close-sidebar" class="bg-red-500 p-2 text-white rounded-full h-10 w-10 flex items-center justify-center">X</button>
+                    <h3 class="text-xl text-center font-semibold texto-morado">Cambiar Estilos</h3>
+
+                    <div class="mt-4">
+                        <label for="font-size" class="block text-black font-semibold">Tamaño de fuente</label>
+                        <input type="number" id="font-size" min="12" max="24" class="border p-2 w-full mt-2 text-black" placeholder="Tamaño de fuente (12-24)">
+                        <button id="apply-font-size" class="mt-2 bg-anaranjado text-white px-6 py-2 rounded transition duration-300 ease-in-out mx-auto block">
+                            Cambiar fuente
+                        </button>
+                    </div>
+
+                    <div class="mt-4">
+                        <button id="bold-button" class="w-full bg-azul-oscuro p-2 rounded mb-2">Negrita</button>
+                        <button id="italic-button" class="w-full bg-celeste-verdoso p-2 rounded mb-2">Cursiva</button>
+                        <button id="dark-mode" class="w-full bg-morado-oscuro p-2 rounded">Modo Oscuro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+<!-- Parallax 1 -->
+<section class="relative h-100 bg-cover bg-center parallax" style="background-image: url('../images/cloud-parallax1.jpg');">
+  <div class="absolute inset-0 bg-black opacity-80 flex justify-center items-center text-center">
+    <div>
+      <h2 class="text-white text-4xl font-bold mb-4">La Revolución de la Nube</h2>
+      <p class="text-white text-lg mb-6">Transformamos la forma en que las empresas se conectan con el futuro a través de soluciones basadas en la nube.</p>
+      <div class="flex justify-center space-x-4">
+        <a href="index.html" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Conócenos más</a>
+        <a href="explorar.html" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">Explorar más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Parallax 2 -->
+<section class="relative h-150 bg-cover bg-center parallax" style="background-image: url('../images/cloud-parallax3.jpg');">
+  <div class="absolute inset-0 bg-black opacity-80 flex justify-center items-center text-center">
+    <div class="container mx-auto px-4 py-16">
+      <h1 class="text-3xl font-bold text-white mb-8">¿Quiénes somos?</h1>
+      <p class="text-lg text-white mb-6">
+          En <span class="texto-morado font-bold">Cloudy</span>, nuestra visión es crear un futuro donde las soluciones basadas en la nube se conviertan en el pilar fundamental para la innovación tecnológica. Nos especializamos en brindar plataformas ágiles, escalables y seguras que empoderan a las empresas para enfrentar los retos del mundo digital.
+      </p>
+      <p class="text-lg text-white mb-6">
+          Como un equipo de visionarios, trabajamos con pasión y dedicación para ofrecer las mejores herramientas para que las empresas adopten la nube de manera eficiente. Creemos firmemente en el poder transformador de la tecnología y en su capacidad para mejorar la calidad de vida, la productividad y la competitividad de todos los sectores.
+      </p>
+      <div class="text-center">
+        <a href="servicios.html" class="bg-purple-500 text-white mt-6 px-6 py-2 rounded-lg hover:bg-purple-600">Conoce nuestras aplicaciones</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Parallax 3 -->
+  <section class="relative h-150 bg-cover bg-center parallax" style="background-image: url('../images/cloud-parallax2.jpg');">
+    <div class="absolute inset-0 bg-black opacity-80 flex justify-center items-center text-center">
+      <div>
+        <h2 class="text-white text-4xl font-bold mb-4">Equipo comprometido por la Revolución Cloud</h2>
+        <p class="text-white text-lg mb-6">Un equipo dedicado a liderar el cambio hacia un futuro más conectado, eficiente y digital.</p>
+        <div class="flex justify-center space-x-4">
+          <a href="contactos.html" class="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600">Déjanos tu opinión</a>
+          <a href="explorar.html" class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-yellow-600">Descubre más</a>
         </div>
       </div>
-      
-      <table class="table-auto w-full bg-white rounded shadow mt-8">
-        <thead>
-          <tr class="bg-gray-300">
-            <th class="px-4 py-2">Tipo</th>
-            <th class="px-4 py-2">Beneficios</th>
-            <th class="px-4 py-2">Casos de Uso</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-4 py-2">IaaS</td>
-            <td class="border px-4 py-2">Flexible y escalable</td>
-            <td class="border px-4 py-2">Infraestructura TI</td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2">PaaS</td>
-            <td class="border px-4 py-2">Fomenta la productividad</td>
-            <td class="border px-4 py-2">Desarrollo de software</td>
-          </tr>
-        </tbody>
-      </table>
+    </div>
+  </section>
+
+  <!-- Parallax 4 -->
+  <section class="relative bg-cover bg-center parallax" style="background-image: url('../images/cloud-parallax4.jpg');">
+    <div class="absolute inset-0 bg-black opacity-80 flex justify-center items-center">
+      <div class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-white text-center mb-8">Misión</h2>
+        <p class="text-lg text-gray-200 text-center mb-6">
+          Brindar a las empresas las herramientas necesarias para una transición efectiva hacia la nube, mejorando su rendimiento, flexibilidad y capacidad para escalar operaciones de manera rápida y eficiente.
+        </p>
+
+        <h2 class="text-3xl font-bold text-white text-center mb-8">Visión</h2>
+        <p class="text-lg text-gray-200 text-center mb-6">
+          Ser el líder en soluciones tecnológicas basadas en la nube, promoviendo la transformación digital y la innovación dentro de todas las industrias, creando un futuro más inteligente, eficiente y sostenible.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Álbum de Imágenes -->
+  
+  <div id="gallery" class="relative w-full pb-6 bg-morado-oscuro" data-carousel="slide">
+    <h2 class="text-3xl font-bold texto-amarillo text-center pt-6 mb-8">Galería de Imágenes</h2>
+    <p class="text-lg font-medium text-white text-center mb-6">¡Fascínate con nuestra colección de imágenes que muestran lo mejor de la tecnología en la nube y la innovación!</p>
+
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg  md:h-96">
+        <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="images/cloud-imagen1.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Imagen 1">
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <img src="images/cloud-imagen2.png" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Imagen 2">
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="images/cloud-imagen3.png" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Imagen 3">
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="images/cloud-imagen4.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Imagen 4">
+        </div>
+        <!-- Item 5 -->
+        <div class="bg-morado hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="images/cloud-imagen5.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Imagen 5">
+        </div>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-indigo-600/30 dark:bg-violet-700/30 group-hover:bg-yellow-500/50 dark:group-hover:bg-indigo-800/60 group-focus:ring-4 group-focus:ring-gray-800 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-indigo-600/30 dark:bg-violet-700/30 group-hover:bg-yellow-500/50 dark:group-hover:bg-indigo-800/60 group-focus:ring-4 group-focus:ring-gray-800 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+
+
+  <!-- Galería de Videos -->
+  <section class="container bg-gray-900 mx-auto px-4 py-16">
+      <h2 class="text-2xl font-bold texto-amarillo text-center mb-8">Galería de Videos</h2>
+      <p class="text-lg font-medium text-white text-center mb-6">Explora nuestros videos para conocer más sobre el futuro de la tecnología y la innovación en la nube.</p>
+
+      <div class="grid grid-cols-3 gap-4">
+          <div><iframe width="100%" height="200" src="https://www.youtube.com/embed/M988_fsOSWo?si=PyUK-SRKYtLsOzRq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div><iframe width="100%" height="200" src="https://www.youtube.com/embed/-LhdSLUeNVU?si=pSAwyq69Xvkgr814" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div><iframe width="100%" height="200" src="https://www.youtube.com/embed/MS3sxCkLzis?si=5Z0vI_14am-Pfdly" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div><iframe width="100%" height="200" src="https://www.youtube.com/embed/4_mLpWYtZWA?si=ksWw2gtQQmL2fkBX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div><iframe width="100%" height="200" src="https://www.youtube.com/embed/fHvmIP7Gy38?si=nEO6QnZem1KZ3TmV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div><iframe width="100%" height="200" src="https://www.youtube.com/embed/krESF7CzbDM?si=iVpxnNtfIT_tF_dh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div><iframe width="100%" height="200" src="https://www.youtube.com/embed/-PwavDg7BaI?si=AfogqTunJtxB7n3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div><iframe width="100%" height="200" src="https://www.youtube.com/embed/I-bZvQlmN6I?si=OwBAo8y3-D8JJR86" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div><iframe width="100%" height="200" src="https://www.youtube.com/embed/g8Y_9mujMDs?si=uoNZBfxJjUjTYCSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="bg-morado font-semibold p-4 text-center">
+      <div class="container mx-auto">
+          <div class="mb-4">
+              <!-- Información de diseñadores -->
+              <p>Diseñado por:</p>
+              <p>Pablo Boza - U22239512</p>
+              <p>Kevin Kobashikawa - U22204885</p>
+          </div>
+          
+          <!-- Línea divisora -->
+          <hr class="my-4 border-t-0 border-gray-400">
+          
+          <!-- Derechos reservados y redes sociales -->
+          <div class="flex justify-center items-center space-x-4 mt-4">
+              <!-- Derechos reservados -->
+              <p>&copy; 2024 Todos los derechos reservados</p>
+              
+              <!-- Redes sociales y plataformas -->
+              <div class="mt-0 flex space-x-4">
+                  <a href="https://www.facebook.com/" class="mx-2" target="_blank">
+                      <img src="images/facebook-icon.png" alt="Facebook" class="w-8 h-8">
+                  </a>
+                  <a href="https://www.twitter.com/" class="mx-2" target="_blank">
+                      <img src="images/twitter-icon.png" alt="Twitter" class="w-8 h-8">
+                  </a>
+                  <a href="https://www.linkedin.com/in/" class="mx-2" target="_blank">
+                      <img src="images/linkedin-icon.png" alt="LinkedIn" class="w-8 h-8">
+                  </a>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+
+<!-- Script -->
+<script src="js/script.js"></script>
+</body>
+</html>
       
 </body>
 </html>

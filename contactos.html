@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - Tecnologías Cloud</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div>
+        <header class="bg-morado fixed inset-x-0 top-0 z-50 mb-10">
+            <!-- Navbar -->
+            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                <div class="flex lg:flex-1 items-center">
+                    <a href="#" class="-m-1.5 p-1.5 flex items-center">
+                        <span class="sr-only">Mi sitio Web</span>
+                        <!-- Logo -->
+                        <img class="h-8 w-8" src="images/cloud-logo.png" alt="Logo">
+                        <!-- Título al lado del logo -->
+                        <span class="ml-3 text-xl font-bold text-white">Cloudy</span>
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <!-- Menú -->
+                    <a href="index.html" class="text-white text-sm font-semibold text-gray-900">Inicio</a>
+                    <a href="nosotros.html" class="text-white text-sm font-semibold text-gray-900">Nosotros</a>
+                    <a href="aplicaciones.html" class="text-white text-sm font-semibold text-gray-900">Explorar</a>
+                    <a href="servicios.html" class="text-white text-sm font-semibold text-gray-900">Servicios</a>
+                    <a href="contactos.html" class="text-white text-sm font-semibold text-gray-900">Contactos</a>
+                </div>
+                <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
+                    <!-- Botón Cambiar Estilos -->
+                    <button id="cambiar-estilos" class="bg-amarillo texto-morado font-semibold px-6 py-2 rounded btn-personalizar transition duration-300 ease-in-out">
+                        Personalizar
+                    </button>
+                    
+                    <!-- Menú desplegable -->
+                    <div id="sidebar" class="translate-x-full fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex justify-end">
+                        <div class="w-64 bg-white p-4">
+                            <button id="close-sidebar" class="bg-red-500 p-2 text-white rounded-full h-10 w-10 flex items-center justify-center">X</button>
+                            <h3 class="text-xl text-center font-semibold texto-morado">Cambiar Estilos</h3>
+    
+                            <div class="mt-4">
+                                <label for="font-size" class="block text-black font-semibold">Tamaño de fuente</label>
+                                <input type="number" id="font-size" min="12" max="24" class="border p-2 w-full mt-2 text-black" placeholder="Tamaño de fuente (12-24)">
+                                <button id="apply-font-size" class="mt-2 bg-anaranjado text-white px-6 py-2 rounded transition duration-300 ease-in-out mx-auto block">
+                                    Cambiar fuente
+                                </button>
+                            </div>
+    
+                            <div class="mt-4">
+                                <button id="bold-button" class="w-full bg-azul-oscuro p-2 rounded mb-2">Negrita</button>
+                                <button id="italic-button" class="w-full bg-celeste-verdoso p-2 rounded mb-2">Cursiva</button>
+                                <button id="dark-mode" class="w-full bg-morado-oscuro p-2 rounded">Modo Oscuro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="bg-beich p-12"></div>
+    
+    <!-- Formulario adaptado para "Cloudy" -->
+    <div class="bg-beich flex items-center justify-center min-h-screen">
+        <form class="bg-white p-8 rounded-md shadow-md w-full max-w-lg">
+            <div class="space-y-6">
+            <h2 class="text-2xl font-bold text-center text-indigo-600">Contáctanos</h2>
+            <p class="text-sm text-gray-600 text-center">
+                Completa este formulario y nuestro equipo se pondrá en contacto contigo lo antes posible.
+            </p>
+
+            <!-- Nombre -->
+            <div>
+                <label for="first-name" class="block text-sm font-medium text-gray-900">Nombre</label>
+                <input type="text" id="first-name" placeholder="Tu nombre" autocomplete="given-name"
+                class="w-full mt-2 rounded-md borde-morado sm:text-sm">
+            </div>
+
+            <!-- Apellido -->
+            <div>
+                <label for="last-name" class="block text-sm font-medium text-gray-900">Apellido</label>
+                <input type="text" id="last-name" placeholder="Tu apellido" autocomplete="family-name"
+                class="w-full mt-2 rounded-md borde-morado sm:text-sm">
+            </div>
+
+            <!-- Correo -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-900">Correo Electrónico</label>
+                <input type="email" id="email" placeholder="tuemail@ejemplo.com" autocomplete="email"
+                class="w-full mt-2 rounded-md borde-morado sm:text-sm">
+            </div>
+
+            <!-- Selección de Intereses -->
+            <div>
+                <label for="interest" class="block text-sm font-medium text-gray-900">¿Qué tecnología te interesa?</label>
+                <select id="interest" class="w-full mt-2 rounded-md borde-morado sm:text-sm">
+                    <option value="cloud-ia">Cloud con IA</option>
+                    <option value="cloud-iot">Cloud con IoT</option>
+                    <option value="cloud-bigdata">Cloud con Big Data</option>
+                    <option value="cloud-cybersecurity">Cloud con Ciberseguridad</option>
+                    <option value="cloud-devops">Cloud con DevOps</option>
+                </select>
+            </div>
+
+            <!-- Preferencias de Contacto -->
+            <fieldset>
+                <legend class="block text-sm font-medium text-gray-900">Preferencia de Contacto</legend>
+                <div class="mt-2 space-y-1">
+                    <div>
+                        <input type="radio" id="email-contact" name="contact" value="email" class="mr-2 btn-ratio-morado">
+                        <label for="email-contact" class="text-sm">Correo Electrónico</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="phone-contact" name="contact" value="phone" class="mr-2 btn-ratio-morado">
+                        <label for="phone-contact" class="text-sm">Llamada Telefónica</label>
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <!-- Mensaje -->
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-900">Mensaje</label>
+                <textarea id="message" rows="4" placeholder="Escribe tu mensaje aquí"
+                class="w-full mt-2 rounded-md borde-morado sm:text-sm"></textarea>
+            </div>
+
+            <!-- Casilla de Aceptación -->
+            <div>
+                <input type="checkbox" id="terms" class="mr-2">
+                <label for="terms" class="text-sm text-gray-600">
+                Acepto la <a href="#" class="text-indigo-600 hover:underline">política de privacidad</a> y doy mi consentimiento para el uso de mis datos.
+                </label>
+            </div>
+
+            <!-- Barra de Progreso -->
+            <div>
+                <label for="progress" class="block text-sm font-medium text-gray-900">Completado de Formulario</label>
+                <progress id="progress" value="50" max="100" class="w-full mt-2"></progress>
+                <p class="text-sm text-gray-600">50% completado</p>
+            </div>
+
+            <!-- Botones -->
+            <div class="flex items-center justify-between">
+                <button type="reset" class="px-4 py-2 text-sm text-gray-600 hover:underline">Cancelar</button>
+                <button type="submit" class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow hover:bg-indigo-500">
+                Enviar
+                </button>
+            </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="bg-beich p-2"></div>
+    
+    <!-- Footer -->
+    <footer class="bg-morado font-semibold p-4 text-center">
+        <div class="container mx-auto">
+            <div class="mb-4">
+                <!-- Información de diseñadores -->
+                <p>Diseñado por:</p>
+                <p>Pablo Boza - U22239512</p>
+                <p>Kevin Kobashikawa - U22204885</p>
+            </div>
+            
+            <!-- Línea divisora -->
+            <hr class="my-4 border-t-0 border-gray-400">
+            
+            <!-- Derechos reservados y redes sociales -->
+            <div class="flex justify-center items-center space-x-4 mt-4">
+                <!-- Derechos reservados -->
+                <p>&copy; 2024 Todos los derechos reservados</p>
+                
+                <!-- Redes sociales y plataformas -->
+                <div class="mt-0 flex space-x-4">
+                    <a href="https://www.facebook.com/" class="mx-2" target="_blank">
+                        <img src="images/facebook-icon.png" alt="Facebook" class="w-8 h-8">
+                    </a>
+                    <a href="https://www.twitter.com/" class="mx-2" target="_blank">
+                        <img src="images/twitter-icon.png" alt="Twitter" class="w-8 h-8">
+                    </a>
+                    <a href="https://www.linkedin.com/in/" class="mx-2" target="_blank">
+                        <img src="images/linkedin-icon.png" alt="LinkedIn" class="w-8 h-8">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

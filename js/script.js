@@ -172,5 +172,112 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("next").addEventListener("click", showNextGroup);
 });
 
+//Formulario
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Elementos del formulario
+    const form = document.querySelector('form');
+    const progressBar = document.getElementById('progress');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const firstName = document.getElementById('first-name');
+    const lastName = document.getElementById('last-name');
+    const email = document.getElementById('email');
+    const interest = document.getElementById('interest');
+    const contactRadios = document.querySelectorAll('input[name="contact"]');
+    const message = document.getElementById('message');
+    const termsCheckbox = document.getElementById('terms');
+  
+    // Función para actualizar el progreso
+    function updateProgress() {
+      let completedFields = 0;
+  
+      // Recuento de campos completados
+      if (firstName.value) completedFields++;
+      if (lastName.value) completedFields++;
+      if (email.value) completedFields++;
+      if (interest.value) completedFields++;
+      if (Array.from(contactRadios).some(radio => radio.checked)) completedFields++;
+      if (message.value) completedFields++;
+      if (termsCheckbox.checked) completedFields++;
+  
+      // Calcular porcentaje de progreso
+      const totalFields = 7; // Total de campos requeridos
+      const progress = (completedFields / totalFields) * 100;
+  
+      // Actualizar barra de progreso y texto
+      progressBar.value = progress;
+      progressBar.nextElementSibling.textContent = `${Math.round(progress)}% completado`;
+  
+      // Habilitar o deshabilitar el botón Enviar
+      if (completedFields === totalFields) {
+        submitButton.disabled = false;
+        submitButton.classList.remove('bg-indigo-300');
+        submitButton.classList.add('bg-indigo-600');
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add('bg-indigo-300');
+        submitButton.classList.remove('bg-indigo-600');
+      }
+    }
+  
+    // Escuchar cambios en los campos del formulario
+    form.addEventListener('input', updateProgress);
+    form.addEventListener('change', updateProgress);
+  
+    // Llamar a updateProgress al cargar la página para verificar el estado inicial
+    updateProgress();
+  });
+  
+//Nosotros: Album de Imagenes
+
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('#gallery');
+    const prevButton = carousel.querySelector('[data-carousel-prev]');
+    const nextButton = carousel.querySelector('[data-carousel-next]');
+    const items = carousel.querySelectorAll('[data-carousel-item]');
+    let currentIndex = 0;
+    const intervalTime = 3000;  // Intervalo de tiempo en milisegundos (3 segundos)
+    let interval;
+
+    function updateCarousel() {
+        items.forEach((item, index) => {
+            item.classList.add('hidden');
+            if (index === currentIndex) {
+                item.classList.remove('hidden');
+            }
+        });
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
+        updateCarousel();
+        resetInterval();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex === items.length - 1) ? 0 : currentIndex + 1;
+        updateCarousel();
+        resetInterval();
+    });
+
+    // Función para iniciar el carrusel automático
+    function startAutoSlide() {
+        interval = setInterval(() => {
+            currentIndex = (currentIndex === items.length - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        }, intervalTime);
+    }
+
+    // Detener el carrusel automático y reiniciar
+    function resetInterval() {
+        clearInterval(interval);
+        startAutoSlide();
+    }
+
+    // Inicialización
+    updateCarousel();
+    startAutoSlide();
+});
+
 
 
