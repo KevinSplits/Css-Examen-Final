@@ -1,7 +1,33 @@
+ // Selecciona los elementos relevantes
+ const hamburgerButton = document.getElementById("hamburger-menu");
+ const mobileMenu = document.getElementById("mobile-menu");
+ const sidebar = document.getElementById("sidebar");
+ const closeSidebarButton = document.getElementById("close-sidebar");
+ const cambiarEstilosButtonMobile = document.getElementById("cambiar-estilos-mobile");
+
+ // Escucha el clic en el botón de la hamburguesa
+ hamburgerButton.addEventListener("click", () => {
+     mobileMenu.classList.toggle("hidden");
+ });
+
+ // Mostrar el menú de personalización cuando se hace clic en el botón de personalizar
+ document.getElementById("cambiar-estilos").addEventListener("click", () => {
+     sidebar.classList.toggle("hidden");
+ });
+
+ // Mostrar el menú de personalización cuando se hace clic en el botón de personalizar (móvil)
+ cambiarEstilosButtonMobile.addEventListener("click", () => {
+     sidebar.classList.toggle("hidden");
+ });
+
+ // Cerrar el menú de personalización
+ closeSidebarButton.addEventListener("click", () => {
+     sidebar.classList.add("hidden");
+ });
+
 // Referencias a los elementos
 const toggleSidebar = document.getElementById('cambiar-estilos');
 const closeSidebar = document.getElementById('close-sidebar');
-const sidebar = document.getElementById('sidebar');
 
 // Abrir y cerrar sidebar
 toggleSidebar.addEventListener('click', () => {

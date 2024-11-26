@@ -22,52 +22,75 @@
                     </a>
                 </div>
                 <div class="flex lg:hidden">
-                    <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <button type="button" id="hamburger-menu"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
                 </div>
-                <div class="hidden lg:flex lg:gap-x-12">
-                    <!-- Menú -->
+    
+                <!-- Menú principal visible en pantallas grandes -->
+                <div class="hidden lg:flex pt-6 lg:gap-x-12">
                     <a href="index.html" class="text-white text-sm font-semibold text-gray-900">Inicio</a>
                     <a href="nosotros.html" class="text-white text-sm font-semibold text-gray-900">Nosotros</a>
                     <a href="aplicaciones.html" class="text-white text-sm font-semibold text-gray-900">Tipos de cloud</a>
                     <a href="servicios.html" class="text-white text-sm font-semibold text-gray-900">Aplicaciones</a>
                     <a href="contactos.html" class="text-white text-sm font-semibold text-gray-900">Contactos</a>
-                </div>
-                <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
-                    <!-- Botón Cambiar Estilos -->
-                    <button id="cambiar-estilos" class="bg-amarillo texto-morado font-semibold px-6 py-2 rounded btn-personalizar transition duration-300 ease-in-out">
+    
+                    <!-- Botón Personalizar siempre visible en el Navbar -->
+                    <button id="cambiar-estilos"
+                        class="bg-amarillo texto-morado font-semibold px-6 py-2 rounded btn-personalizar transition duration-300 ease-in-out">
                         Personalizar
                     </button>
-                    
-                    <!-- Menú desplegable -->
-                    <div id="sidebar" class="translate-x-full fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex justify-end">
-                        <div class="w-64 bg-white p-4">
-                            <button id="close-sidebar" class="bg-red-500 p-2 text-white rounded-full h-10 w-10 flex items-center justify-center">X</button>
-                            <h3 class="text-xl text-center font-semibold texto-morado">Cambiar Estilos</h3>
+                </div>
     
-                            <div class="mt-4">
-                                <label for="font-size" class="block text-black font-semibold">Tamaño de fuente</label>
-                                <input type="number" id="font-size" min="12" max="24" class="border p-2 w-full mt-2 text-black" placeholder="Tamaño de fuente (12-24)">
-                                <button id="apply-font-size" class="mt-2 bg-anaranjado text-white px-6 py-2 rounded transition duration-300 ease-in-out mx-auto block">
-                                    Cambiar fuente
-                                </button>
-                            </div>
+                <!-- Menú hamburguesa en móviles -->
+                <div id="mobile-menu" class="lg:hidden hidden absolute top-0 left-0 w-full bg-morado p-4">
+                    <a href="index.html" class="text-white text-sm font-semibold block py-2">Inicio</a>
+                    <a href="nosotros.html" class="text-white text-sm font-semibold block py-2">Nosotros</a>
+                    <a href="aplicaciones.html" class="text-white text-sm font-semibold block py-2">Tipos de cloud</a>
+                    <a href="servicios.html" class="text-white text-sm font-semibold block py-2">Aplicaciones</a>
+                    <a href="contactos.html" class="text-white text-sm font-semibold block py-2">Contactos</a>
     
-                            <div class="mt-4">
-                                <button id="bold-button" class="w-full bg-azul-oscuro p-2 rounded mb-2">Negrita</button>
-                                <button id="italic-button" class="w-full bg-celeste-verdoso p-2 rounded mb-2">Cursiva</button>
-                            </div>
+                    <!-- Botón Personalizar en el menú hamburguesa -->
+                    <button id="cambiar-estilos-mobile"
+                        class="bg-amarillo texto-morado font-semibold px-6 py-2 rounded btn-personalizar transition duration-300 ease-in-out mt-4 w-full">
+                        Personalizar
+                    </button>
+                </div>
+    
+                <!-- Menú de personalización (invisible inicialmente) -->
+                <div id="sidebar" class="translate-x-full fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex justify-end hidden">
+                    <div class="w-64 bg-white p-4">
+                        <button id="close-sidebar"
+                            class="bg-red-500 p-2 text-white rounded-full h-10 w-10 flex items-center justify-center">X</button>
+                        <h3 class="text-xl text-center font-semibold texto-morado">Cambiar Estilos</h3>
+    
+                        <div class="mt-4">
+                            <label for="font-size" class="block text-black font-semibold">Tamaño de fuente</label>
+                            <input type="number" id="font-size" min="12" max="24"
+                                class="border p-2 w-full mt-2 text-black" placeholder="Tamaño de fuente (12-24)">
+                            <button id="apply-font-size"
+                                class="mt-2 bg-anaranjado text-white px-6 py-2 rounded transition duration-300 ease-in-out mx-auto block">
+                                Cambiar fuente
+                            </button>
+                        </div>
+    
+                        <div class="mt-4">
+                            <button id="bold-button" class="w-full bg-azul-oscuro p-2 rounded mb-2">Negrita</button>
+                            <button id="italic-button"
+                                class="w-full bg-celeste-verdoso p-2 rounded mb-2">Cursiva</button>
                         </div>
                     </div>
                 </div>
             </nav>
         </header>
     </div>
-    <div class="bg-beich p-16"></div>
+    <div class="bg-beich p-20"></div>
     
     <!-- Formulario adaptado para "Cloudy" -->
     <div class="bg-beich flex items-center justify-center min-h-screen">
