@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page - Tecnologías Cloud</title>
-  <link rel="stylesheet" href="../css/estilos.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Tecnologías Cloud</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 text-gray-900">
     <div>
         <header class="bg-morado fixed inset-x-0 top-0 z-50 mb-10">
@@ -22,10 +24,13 @@
                     </a>
                 </div>
                 <div class="flex lg:hidden">
-                    <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <button type="button"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
                 </div>
@@ -33,33 +38,40 @@
                     <!-- Menú -->
                     <a href="index.html" class="text-white text-sm font-semibold text-gray-900">Inicio</a>
                     <a href="nosotros.html" class="text-white text-sm font-semibold text-gray-900">Nosotros</a>
-                    <a href="aplicaciones.html" class="text-white text-sm font-semibold text-gray-900">Tipos de cloud</a>
+                    <a href="aplicaciones.html" class="text-white text-sm font-semibold text-gray-900">Tipos de
+                        cloud</a>
                     <a href="servicios.html" class="text-white text-sm font-semibold text-gray-900">Aplicaciones</a>
                     <a href="contactos.html" class="text-white text-sm font-semibold text-gray-900">Contactos</a>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
                     <!-- Botón Cambiar Estilos -->
-                    <button id="cambiar-estilos" class="bg-amarillo texto-morado font-semibold px-6 py-2 rounded btn-personalizar transition duration-300 ease-in-out">
+                    <button id="cambiar-estilos"
+                        class="bg-amarillo texto-morado font-semibold px-6 py-2 rounded btn-personalizar transition duration-300 ease-in-out">
                         Personalizar
                     </button>
-                    
+
                     <!-- Menú desplegable -->
-                    <div id="sidebar" class="translate-x-full fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex justify-end">
+                    <div id="sidebar"
+                        class="translate-x-full fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex justify-end">
                         <div class="w-64 bg-white p-4">
-                            <button id="close-sidebar" class="bg-red-500 p-2 text-white rounded-full h-10 w-10 flex items-center justify-center">X</button>
+                            <button id="close-sidebar"
+                                class="bg-red-500 p-2 text-white rounded-full h-10 w-10 flex items-center justify-center">X</button>
                             <h3 class="text-xl text-center font-semibold texto-morado">Cambiar Estilos</h3>
-    
+
                             <div class="mt-4">
                                 <label for="font-size" class="block text-black font-semibold">Tamaño de fuente</label>
-                                <input type="number" id="font-size" min="12" max="24" class="border p-2 w-full mt-2 text-black" placeholder="Tamaño de fuente (12-24)">
-                                <button id="apply-font-size" class="mt-2 bg-anaranjado text-white px-6 py-2 rounded transition duration-300 ease-in-out mx-auto block">
+                                <input type="number" id="font-size" min="12" max="24"
+                                    class="border p-2 w-full mt-2 text-black" placeholder="Tamaño de fuente (12-24)">
+                                <button id="apply-font-size"
+                                    class="mt-2 bg-anaranjado text-white px-6 py-2 rounded transition duration-300 ease-in-out mx-auto block">
                                     Cambiar fuente
                                 </button>
                             </div>
-    
+
                             <div class="mt-4">
                                 <button id="bold-button" class="w-full bg-azul-oscuro p-2 rounded mb-2">Negrita</button>
-                                <button id="italic-button" class="w-full bg-celeste-verdoso p-2 rounded mb-2">Cursiva</button>
+                                <button id="italic-button"
+                                    class="w-full bg-celeste-verdoso p-2 rounded mb-2">Cursiva</button>
                             </div>
                         </div>
                     </div>
@@ -67,10 +79,11 @@
             </nav>
         </header>
     </div>
-    
+
     <div class="bg-gradient-to-b from-blue-900 to-blue-600 text-white z-10">
         <!-- Hero Section -->
-        <section class=" container mx-auto flex flex-col-reverse lg:flex-row items-center py-20 px-6 lg:px-20 animate-fade-in">
+        <section
+            class=" container mx-auto flex flex-col-reverse lg:flex-row items-center py-20 px-6 lg:px-20 animate-fade-in">
             <!-- Texto -->
             <div class="lg:w-1/2 text-center lg:text-left space-y-6 ml-3">
                 <h1 class="text-5xl font-bold leading-tight">
@@ -78,44 +91,51 @@
                 </h1>
                 <p class="text-lg text-gray-200 leading-relaxed">
                     Aprende cómo esta tecnología puede mejorar la eficiencia,
-                     seguridad y flexibilidad de tus proyectos, permitiéndote acceder a
-                     soluciones innovadoras y escalables para tu futuro digital
+                    seguridad y flexibilidad de tus proyectos, permitiéndote acceder a
+                    soluciones innovadoras y escalables para tu futuro digital
                 </p>
                 <div class="mt-6 space-x-4">
-                    <a href="servicios.html" 
-                       class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded transition duration-300">
+                    <a href="servicios.html"
+                        class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded transition duration-300">
                         Empieza Ahora
                     </a>
-                    <a href="contactos.html" 
-                       class="bg-white hover:bg-gray-100 text-blue-600 font-semibold px-6 py-3 rounded transition duration-300">
+                    <a href="contactos.html"
+                        class="bg-white hover:bg-gray-100 text-blue-600 font-semibold px-6 py-3 rounded transition duration-300">
                         Coméntanos
                     </a>
                 </div>
             </div>
-    
+
             <!-- Imagen / Botón para abrir el modal -->
             <div class="lg:w-1/2 flex justify-center mt-6">
-                <button id="open-modal" class="relative bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300">
+                <button id="open-modal"
+                    class="relative bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300">
                     <img src="images/hero-cloud.png" alt="Cloud Technology" class="w-full max-w-lg animate-fade-in" />
-                    <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-9 font-bold text-3xl">
+                    <span
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-9 font-bold text-3xl">
                         ▶
                     </span>
                 </button>
             </div>
         </section>
-    
+
         <!-- Animación sutil de fondo -->
         <div class="inset-0 bg-gradient-to-r from-blue-800 to-blue-600 opacity-40"></div>
     </div>
-    
+
     <!-- Modal -->
     <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center hidden">
         <div id="modal-content" class="bg-white p-12 rounded shadow-lg max-w-4xl w-full relative z-50">
-            <button id="close-modal" class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-600">
+            <button id="close-modal"
+                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-600">
                 X
             </button>
             <div class="relative w-full" style="padding-top: 40.25%;"> <!-- 16:9 aspect ratio manually handled -->
-                <iframe src="https://www.youtube.com/embed/MCKdahh2lSo?si=FLckGnz7ifPIVZnS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="absolute top-0 left-0 w-full h-full rounded"></iframe>
+                <iframe src="https://www.youtube.com/embed/MCKdahh2lSo?si=FLckGnz7ifPIVZnS" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                    class="absolute top-0 left-0 w-full h-full rounded"></iframe>
             </div>
         </div>
     </div>
@@ -127,7 +147,7 @@
 
             <!-- Usamos dl para distribución de las estadísticas en 3 columnas -->
             <dl class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center text-white">
-                
+
                 <!-- Usuarios activos -->
                 <div class="p-6 rounded-lg transition duration-300">
                     <hr class="border-t-2 border-morado-tenue mb-8"> <!-- Línea arriba de cada 'dt' -->
@@ -135,7 +155,7 @@
                     <dd id="usuarios-activos" class="text-3xl font-semibold texto-morado-tenue sm:text-5xl">0</dd>
                     <hr class="border-t-2 border-morado-tenue mt-6">
                 </div>
-                
+
                 <!-- Tiempo de actividad del sistema -->
                 <div class="p-6 rounded-lg transition duration-300">
                     <hr class="border-t-2 border-morado-tenue mb-8"> <!-- Línea arriba de cada 'dt' -->
@@ -143,112 +163,144 @@
                     <dd id="tiempo-actividad" class="text-3xl font-semibold texto-morado-tenue sm:text-5xl">99.9%</dd>
                     <hr class="border-t-2 border-morado-tenue mt-6">
                 </div>
-                
+
                 <!-- Transacciones diarias -->
                 <div class="p-6 rounded-lg transition duration-300">
                     <hr class="border-t-2 border-morado-tenue mb-8"> <!-- Línea arriba de cada 'dt' -->
                     <dt class="text-2xl font-semibold texto-morado-tenue mb-3">Transacciones Diarias</dt>
-                    <dd id="transacciones-diarias" class="text-3xl font-semibold texto-morado-tenue sm:text-5xl">44 millones</dd>
+                    <dd id="transacciones-diarias" class="text-3xl font-semibold texto-morado-tenue sm:text-5xl">44
+                        millones</dd>
                     <hr class="border-t-2 border-morado-tenue mt-6">
                 </div>
-                
+
             </dl>
         </div>
     </div>
 
     <section class="bg-card-container-amarillo px-10 py-20">
-        <h2 class="text-3xl text-center font-bold mb-16 texto-morado">Transforma tu negocio con soluciones en la nube</h2>
+        <h2 class="text-3xl text-center font-bold mb-16 texto-morado">Transforma tu negocio con soluciones en la nube
+        </h2>
         <p class="text-lg text-black text-center font-semibold px-6 mt-4 mb-4">
             La nube está transformando el panorama tecnológico de una manera sin precedentes.<br>
             Descubre qué características hacen de las tecnologías cloud la herramienta perfecta para tu negocio
         </p>
-        
+
         <!-- Contenedor de tarjetas -->
         <div class="flex flex-wrap justify-center mt-6 gap-6 px-8 py-10">
             <!-- Tarjeta 1 -->
-            <div class="bg-card-azul p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center">
+            <div
+                class="bg-card-azul p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center">
                 <img src="images/cloud-seguridad.png" alt="Seguridad avanzada" class="w-16 h-16 mx-auto mb-6">
                 <h3 class="text-2xl font-semibold mb-4 text-white">Seguridad avanzada</h3>
                 <p class="text-white mb-8">
-                    Las soluciones en la nube garantizan altos niveles de seguridad para proteger tus datos y proyectos, utilizando la última tecnología en encriptación y protección.
+                    Las soluciones en la nube garantizan altos niveles de seguridad para proteger tus datos y proyectos,
+                    utilizando la última tecnología en encriptación y protección.
                 </p>
-                <a href="servicios.html" class="bg-btn-vino text-yellow-400 px-4 py-2 rounded transition duration-300 ease-in-out font-semibold">Leer más</a>
+                <a href="servicios.html"
+                    class="bg-btn-vino text-yellow-400 px-4 py-2 rounded transition duration-300 ease-in-out font-semibold">Leer
+                    más</a>
             </div>
-    
+
             <!-- Tarjeta 2 -->
-            <div class="bg-card-morado p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center">
+            <div
+                class="bg-card-morado p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center">
                 <img src="images/cloud-escalabilidad.png" alt="Escalabilidad ilimitada" class="w-16 h-16 mx-auto mb-6">
                 <h3 class="text-2xl font-semibold mb-4 text-white">Escalabilidad ilimitada</h3>
                 <p class="text-white mb-8">
-                    Con la nube, tu infraestructura puede crecer rápidamente para adaptarse a las demandas sin tener que preocuparte por la capacidad de tus servidores.
+                    Con la nube, tu infraestructura puede crecer rápidamente para adaptarse a las demandas sin tener que
+                    preocuparte por la capacidad de tus servidores.
                 </p>
-                <a href="nosotros.html" class="bg-btn-vino text-yellow-400 px-4 py-2 rounded transition duration-300 ease-in-out font-semibold">Ver soluciones</a>
+                <a href="nosotros.html"
+                    class="bg-btn-vino text-yellow-400 px-4 py-2 rounded transition duration-300 ease-in-out font-semibold">Ver
+                    soluciones</a>
             </div>
-    
+
             <!-- Tarjeta 3 -->
-            <div class="bg-card-morado-tenue p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center">
+            <div
+                class="bg-card-morado-tenue p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center">
                 <img src="images/cloud-accesibilidad.png" alt="Accesibilidad global" class="w-16 h-16 mx-auto mb-6">
                 <h3 class="text-2xl font-semibold mb-4 text-white">Accesibilidad global</h3>
                 <p class="text-white mb-8">
-                    Accede a tus aplicaciones y datos desde cualquier lugar del mundo, siempre que tengas conexión a Internet, aumentando la flexibilidad y productividad.
+                    Accede a tus aplicaciones y datos desde cualquier lugar del mundo, siempre que tengas conexión a
+                    Internet, aumentando la flexibilidad y productividad.
                 </p>
-                <a href="contactos.html" class="bg-btn-vino text-yellow-400 px-4 py-2 rounded transition duration-300 ease-in-out font-semibold">Contacta con nosotros</a>
+                <a href="contactos.html"
+                    class="bg-btn-vino text-yellow-400 px-4 py-2 rounded transition duration-300 ease-in-out font-semibold">Contacta
+                    con nosotros</a>
             </div>
         </div>
     </section>
-    
+
     <div class="bg-gray-900 py-20 px-6">
         <h2 class="text-3xl font-bold mb-12 texto-amarillo text-center">Opiniones de nuestros usuarios</h2>
         <div id="testimonios" class="flex justify-center mt-6 gap-6 overflow-hidden">
             <!-- Testimonio 1 -->
-            <div class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative">
-                <img src="images/cloud-testimonio1.jpg" alt="Ana Pérez" class="w-24 h-24 rounded-full mx-auto border-4 border-white">
-                <p class="mb-4">"Gracias a las soluciones en la nube, nuestro equipo ha podido colaborar de manera más eficiente y segura, sin importar la ubicación".</p>
+            <div
+                class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative">
+                <img src="images/cloud-testimonio1.jpg" alt="Ana Pérez"
+                    class="w-24 h-24 rounded-full mx-auto border-4 border-white">
+                <p class="mb-4">"Gracias a las soluciones en la nube, nuestro equipo ha podido colaborar de manera más
+                    eficiente y segura, sin importar la ubicación".</p>
                 <p class="font-semibold">Ana Pérez</p>
                 <p class="text-sm">Gerente de Tecnología</p>
             </div>
-    
+
             <!-- Testimonio 2 -->
-            <div class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative">
-                <img src="images/cloud-testimonio2.jpg" alt="Luis Martínez" class="w-24 h-24 rounded-full mx-auto border-4 border-white">
-                <p class="mb-4">"La flexibilidad y la capacidad de adaptarnos a nuevas necesidades de la empresa ha sido mucho más fácil con el uso de la nube".</p>
+            <div
+                class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative">
+                <img src="images/cloud-testimonio2.jpg" alt="Luis Martínez"
+                    class="w-24 h-24 rounded-full mx-auto border-4 border-white">
+                <p class="mb-4">"La flexibilidad y la capacidad de adaptarnos a nuevas necesidades de la empresa ha sido
+                    mucho más fácil con el uso de la nube".</p>
                 <p class="font-semibold">Luis Martínez</p>
                 <p class="text-sm">Director de Innovación</p>
             </div>
-    
+
             <!-- Testimonio 3 -->
-            <div class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative">
-                <img src="images/cloud-testimonio3.jpg" alt="Carlos Gómez" class="w-24 h-24 rounded-full mx-auto border-4 border-white">
-                <p class="mb-4">"La nube nos ha permitido acceder a herramientas avanzadas sin la necesidad de grandes inversiones en infraestructura".</p>
+            <div
+                class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative">
+                <img src="images/cloud-testimonio3.jpg" alt="Carlos Gómez"
+                    class="w-24 h-24 rounded-full mx-auto border-4 border-white">
+                <p class="mb-4">"La nube nos ha permitido acceder a herramientas avanzadas sin la necesidad de grandes
+                    inversiones en infraestructura".</p>
                 <p class="font-semibold">Carlos Gómez</p>
                 <p class="text-sm ">CEO de Soluciones Tech</p>
             </div>
-    
+
             <!-- Testimonio 4 (invisible inicialmente) -->
-            <div class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative hidden">
-                <img src="images/cloud-testimonio1.jpg" alt="Ana Pérez" class="w-24 h-24 rounded-full mx-auto border-4 border-white">
-                <p class="mb-4">"Gracias a las soluciones en la nube, nuestro equipo ha podido colaborar de manera más eficiente y segura, sin importar la ubicación".</p>
+            <div
+                class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative hidden">
+                <img src="images/cloud-testimonio1.jpg" alt="Ana Pérez"
+                    class="w-24 h-24 rounded-full mx-auto border-4 border-white">
+                <p class="mb-4">"Gracias a las soluciones en la nube, nuestro equipo ha podido colaborar de manera más
+                    eficiente y segura, sin importar la ubicación".</p>
                 <p class="font-semibold">Ana Pérez</p>
                 <p class="text-sm ">Gerente de Tecnología</p>
             </div>
-    
+
             <!-- Testimonio 5 (invisible inicialmente) -->
-            <div class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative hidden">
-                <img src="images/cloud-testimonio2.jpg" alt="Luis Martínez" class="w-24 h-24 rounded-full mx-auto border-4 border-white">
-                <p class="mb-4">"La flexibilidad y la capacidad de adaptarnos a nuevas necesidades de la empresa ha sido mucho más fácil con el uso de la nube".</p>
+            <div
+                class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative hidden">
+                <img src="images/cloud-testimonio2.jpg" alt="Luis Martínez"
+                    class="w-24 h-24 rounded-full mx-auto border-4 border-white">
+                <p class="mb-4">"La flexibilidad y la capacidad de adaptarnos a nuevas necesidades de la empresa ha sido
+                    mucho más fácil con el uso de la nube".</p>
                 <p class="font-semibold">Luis Martínez</p>
                 <p class="text-sm">Director de Innovación</p>
             </div>
-    
+
             <!-- Testimonio 6 (invisible inicialmente) -->
-            <div class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative hidden">
-                <img src="images/cloud-testimonio3.jpg" alt="Carlos Gómez" class="w-24 h-24 rounded-full mx-auto border-4 border-white">
-                <p class="mb-4">"La nube nos ha permitido acceder a herramientas avanzadas sin la necesidad de grandes inversiones en infraestructura".</p>
+            <div
+                class="testimonio bg-beich p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-[300px] m-4 text-center text-white relative hidden">
+                <img src="images/cloud-testimonio3.jpg" alt="Carlos Gómez"
+                    class="w-24 h-24 rounded-full mx-auto border-4 border-white">
+                <p class="mb-4">"La nube nos ha permitido acceder a herramientas avanzadas sin la necesidad de grandes
+                    inversiones en infraestructura".</p>
                 <p class="font-semibold">Carlos Gómez</p>
                 <p class="text-sm">CEO de Soluciones Tech</p>
             </div>
         </div>
-    
+
         <!-- Botones de navegación -->
         <div class="flex justify-center mt-4">
             <button id="prev" class="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600">Anterior</button>
@@ -256,74 +308,72 @@
         </div>
     </div>
 
-<!-- Footer -->
-<footer class="bg-morado text-white py-8 text-xl">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
-        <!-- Columna de logo y texto descriptivo -->
-        <div class="flex flex-col items-start space-y-4">
-          <div class="text-2xl font-semibold">
-            <span class="text-blue-500">Cloudy</span>
-          </div>
-          <p class="italic">El poder de la nube, a tu alcance.</p>
-          <div class="flex space-x-4">
-            <a href="https://es-la.facebook.com/login/device-based/regular/login/" class="text-gray-400 hover:text-white">
-              <img src="images/facebook-icon1.png" alt="Facebook" class="w-8 h-8">
-            </a>
-            <a href="https://www.instagram.com/" class="text-gray-400 hover:text-white">
-              <img src="images/instagram-icon1.png" alt="Instagram" class="w-8 h-8">
-            </a>
-            <a href="https://x.com/?lang=es" class="text-gray-400 hover:text-white">
-              <img src="images/twitter-icon1.png" alt="Twitter" class="w-8 h-8">
-            </a>
-            <a href="https://github.com/KevinSplits/Css-Examen-Final" class="text-gray-400 hover:text-white">
-              <img src="images/github-icon.png" alt="GitHub" class="w-8 h-8">
-            </a>
-            <a href="https://pe.linkedin.com/" class="text-gray-400 hover:text-white">
-              <img src="images/linkedin-icon1.png" alt="Linkedin" class="w-8 h-8">
-            </a>
-          </div>
+    <!-- Footer -->
+    <footer class="bg-morado text-white py-8 text-xl">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+                <!-- Columna de logo y texto descriptivo -->
+                <div class="flex flex-col items-start space-y-4">
+                    <div class="text-2xl font-semibold">
+                        <span class="text-blue-500">Cloudy</span>
+                    </div>
+                    <p class="italic">El poder de la nube, a tu alcance.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://es-la.facebook.com/login/device-based/regular/login/"
+                            class="text-gray-400 hover:text-white">
+                            <img src="images/facebook-icon1.png" alt="Facebook" class="w-8 h-8">
+                        </a>
+                        <a href="https://www.instagram.com/" class="text-gray-400 hover:text-white">
+                            <img src="images/instagram-icon1.png" alt="Instagram" class="w-8 h-8">
+                        </a>
+                        <a href="https://x.com/?lang=es" class="text-gray-400 hover:text-white">
+                            <img src="images/twitter-icon1.png" alt="Twitter" class="w-8 h-8">
+                        </a>
+                        <a href="https://github.com/KevinSplits/Css-Examen-Final"
+                            class="text-gray-400 hover:text-white">
+                            <img src="images/github-icon.png" alt="GitHub" class="w-8 h-8">
+                        </a>
+                        <a href="https://pe.linkedin.com/" class="text-gray-400 hover:text-white">
+                            <img src="images/linkedin-icon1.png" alt="Linkedin" class="w-8 h-8">
+                        </a>
+                    </div>
+                </div>
+                <!-- Soluciones -->
+                <div>
+                    <h3 class="font-semibold texto-amarillo text-lg">Colaboradores</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Kevin Kobashikawa Cavero</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pablo Boza Torres</a></li>
+
+                    </ul>
+                </div>
+                <!-- Empresa -->
+                <div>
+                    <h3 class="font-semibold texto-amarillo text-lg">Teléfono</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">+51 988 388 321</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">+51 938 378 721</a></li>
+
+                    </ul>
+                </div>
+                <!-- Legal -->
+                <div>
+                    <h3 class="font-semibold texto-amarillo text-lg">Correo</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">kevin100556@gmail.com</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">panlox123@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400">
+                <p>© 2024 Cloud, Inc. Todos los derechos reservados.</p>
+            </div>
         </div>
-  
-        <!-- Soluciones -->
-        <div>
-          <h3 class="font-semibold texto-amarillo text-lg">Colaboradores</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white">Kevin Kobashikawa Cavero</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Pablo Boza Torres</a></li>
-  
-          </ul>
-        </div>
-  
-  
-        <!-- Empresa -->
-        <div>
-          <h3 class="font-semibold texto-amarillo text-lg">Teléfono</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white">+51 988 388 321</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">+51 938 378 721</a></li>
-  
-          </ul>
-        </div>
-  
-        <!-- Legal -->
-        <div>
-          <h3 class="font-semibold texto-amarillo text-lg">Correo</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white">kevin100556@gmail.com</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">panlox123@gmail.com</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="mt-8 text-center text-gray-400">
-        <p>© 2024 Cloud, Inc. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
 
-  <!-- Script -->
-  <script src="js/script.js"></script>
+    <!-- Script -->
+    <script src="js/script.js"></script>
 </body>
-</html>
 
+</html>

@@ -44,14 +44,6 @@ italicButton.addEventListener('click', () => {
     document.body.style.fontStyle = document.body.style.fontStyle === 'italic' ? 'normal' : 'italic';
 });
 
-// Activar modo oscuro
-const darkModeButton = document.getElementById('dark-mode');
-darkModeButton.addEventListener('click', () => {
-    document.body.classList.toggle('bg-gray-100');
-    document.body.classList.toggle('text-gray-900');
-    document.body.classList.toggle('bg-gray-900');
-    document.body.classList.toggle('text-white');
-});
 
 
 //Modal Video
@@ -278,15 +270,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCarousel();
     startAutoSlide();
 });
-
-    // Selección de elementos
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    // Alternar la visibilidad del menú al hacer clic
-    menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
 
 
 
